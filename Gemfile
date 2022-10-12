@@ -5,7 +5,7 @@ ruby "3.1.2"
 gem "bootsnap", require: false
 gem "devise"
 gem "importmap-rails"
-gem "jbuilder"
+gem "jsonapi-serializer"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 gem "pundit", "~> 2.2"
