@@ -50,31 +50,29 @@ RSpec.describe "Boards", type: :request do
     end
   end
 
-  pending do
-    describe 'PUT update' do
-      context 'with valid params' do
-        it 'updates the board and redirect' do
-          expect do
-            put board_path(board), params: {
-              board: {
-                name: 'Updated board'
-              }
+  describe 'PUT update' do
+    context 'with valid params' do
+      it 'updates the list and redirect' do
+        expect do
+          put board_list_path(board, list), params: {
+            list: {
+              title: 'Updated List'
             }
-          end.to change { board.reload.name }.to('Updated board')
-          expect(response).to have_http_status(:redirect)
-        end
+          }
+        end.to change { list.reload.title }.to('Updated List')
+        expect(response).to have_http_status(:redirect)
       end
-      context 'with invalid params' do
-        it 'does not update the board and renders edit' do
-          expect do
-            put board_path(board), params: {
-              board: {
-                name: ''
-              }
+    end
+    context 'with invalid params' do
+      it 'does not update the list and renders edit' do
+        expect do
+          put board_list_path(board, list), params: {
+            list: {
+              title: ''
             }
-          end.not_to change { board.reload.name }
-          expect(response).to have_http_status(:success)
-        end
+          }
+        end.not_to change { list.reload.title }
+        expect(response).to have_http_status(:success)
       end
     end
   end
