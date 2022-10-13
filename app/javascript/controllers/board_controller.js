@@ -100,6 +100,15 @@ export default class extends Controller {
       buttonClick: () => {
         console.log('board clicked');
       },
+      dragendBoard: (el) => {
+        axios.put(`${this.element.dataset.apiUrl}/${el.dataset.id}`, {
+          position: el.dataset.order - 1
+        }, {
+          headers: this.HEADERS
+        }).then((response) => {
+          console.log(`response: `, response);
+        });
+      },
     });
   }
 }
