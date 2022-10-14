@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "Boards", type: :request do
+RSpec.describe "Items", type: :request do
   let(:user) { create(:user) }
   let(:board) { create(:board, user: user) }
   let(:list) { create(:list, board: board) }
