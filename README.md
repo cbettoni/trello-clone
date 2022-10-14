@@ -1,3 +1,3 @@
 # README
 
-Trello clone using Ruby 7 and Kanban library tool
+Trello clone using Ruby 7, Tailwind and Kanban library tool
