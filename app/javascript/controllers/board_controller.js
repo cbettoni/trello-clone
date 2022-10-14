@@ -1,10 +1,9 @@
 import { Controller } from "@hotwired/stimulus";
 import axios from "axios";
-import { get, map, sample } from "lodash-es";
+import { get, map } from "lodash-es";
 
 export default class extends Controller {
   HEADERS = { 'ACCEPT': 'application/json' };
-  BACKGROUND_COLORS = ['bg-indigo-900', 'bg-indigo-700', 'bg-indigo-600', 'bg-indigo-500', 'bg-indigo-300'];
 
   getHeaders() {
     return Array.from(document.getElementsByClassName('kanban-board-header'));
@@ -66,7 +65,7 @@ export default class extends Controller {
   }
 
   buildClassList(classList) {
-    return `text-white, ${sample(this.BACKGROUND_COLORS)}`;
+    return `text-white, bg-indigo-600`;
   }
 
   buildItems(items) {
@@ -101,7 +100,7 @@ export default class extends Controller {
         console.log('board clicked');
       },
       dragendBoard: (el) => {
-        axios.put(`${this.element.dataset.apiUrl}/${el.dataset.id}`, {
+        axios.put(`${this.element.dataset.listPositionsApiUrl}/${el.dataset.id}`, {
           position: el.dataset.order - 1
         }, {
           headers: this.HEADERS

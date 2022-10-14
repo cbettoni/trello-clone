@@ -2,6 +2,8 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
+
+gem "activerecord-import"
 gem "axios_rails"
 gem "bootsnap", require: false
 gem "devise"
