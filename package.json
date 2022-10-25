@@ -1,6 +1,9 @@
 {
   "dependencies": {
     "axios": "^1.1.2"
+  },
+  "engines": {
+    "npm": "8.19.2",
+    "node": "v16.15.1"
   }
-
 }
