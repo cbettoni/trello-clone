@@ -1,3 +1,3 @@
 class ApplicationController < ActionController::Base
-  #include Pundit::Authorization
+  include Pundit::Authorization
 end
