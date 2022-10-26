@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
-  # before_action :authenticate_user!
+  #before_action :authenticate_user!
 
-  protect_from_forgery with: :null_session, only: :destroy
+  #protect_from_forgery with: :null_session, only: :destroy
 
   def new
     @item = list.items.new
