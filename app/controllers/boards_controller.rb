@@ -6,11 +6,11 @@ class BoardsController < ApplicationController
   end
 
   def edit
-    authorize board
+    board
   end
 
   def show
-    authorize board
+    board
   end
 
   def create
