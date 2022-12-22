@@ -19,6 +19,7 @@ gem "stimulus-rails"
 gem "tailwindcss-rails"
 gem "turbo-rails"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem "rails_12factor"
 
 
 # Use Sass to process CSS
