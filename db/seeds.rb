@@ -18,3 +18,4 @@ Board.find_each do |board|
     5.times { |i| Item.create(list: list, title: "Item #{i + 1}") }
   end
 end
+
