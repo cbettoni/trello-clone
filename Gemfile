@@ -15,6 +15,7 @@ gem "pundit", "~> 2.2"
 gem "rails", "~> 7.0.4"
 gem "sprockets-rails"
 gem "sassc-rails"
+gem 'sinatra', '~> 2.0', '>= 2.0.1'
 gem "stimulus-rails"
 gem "tailwindcss-rails"
 gem "turbo-rails"
